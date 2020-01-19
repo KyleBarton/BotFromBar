@@ -44,6 +44,9 @@ def lambda_handler(event, context):
     if "event" in requestBody and "type" in requestBody["event"]:
         if (requestBody["event"]["type"] == "app_mention"):
             response = handleMention(requestBody)
+        if (requestBody["event"]["type"] == "message"):
+            logger.info("message event")
+            logger.info(requestBody["event"])
     
     if response:
         logger.info(response)
@@ -53,7 +56,12 @@ def lambda_handler(event, context):
             text=json.dumps(response)
         )
 
+        return {
+            "statusCode": 200,
+            "body": "App mention handled"
+        }
+
     return {
         "statusCode": 200,
-        "body": "App mention handled"
+        "body": "Check logs for message"
     }
