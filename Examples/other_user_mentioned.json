@@ -1,0 +1,43 @@
+{
+    "token": "vfa0eQufJFrAZt3EOZsDrwmM",
+    "team_id": "T6JU0NLQH",
+    "api_app_id": "ASUGQLUAZ",
+    "event": {
+        "client_msg_id": "791c0ee3-e7de-4285-9400-44a9562e26d1",
+        "type": "message",
+        "text": "<@U6JU28QCR> what're u up to",
+        "user": "U6LGZLC3Z",
+        "ts": "1579461901.000900",
+        "team": "T6JU0NLQH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7OfRi",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U6JU28QCR"
+                            },
+                            {
+                                "type": "text",
+                                "text": " what're u up to"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "channel": "CSJBEGBLH",
+        "event_ts": "1579461901.000900",
+        "channel_type": "channel"
+    },
+    "type": "event_callback",
+    "event_id": "EvSUCR8276",
+    "event_time": 1579461901,
+    "authed_users": [
+        "U6LGZLC3Z"
+    ]
+}

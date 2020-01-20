@@ -1,4 +1,3 @@
-
 {
     "body": "{\"token\": \"vfa0eQufJFrAZt3EOZsDrwmM\", \"team_id\": \"T6JU0NLQH\", \"api_app_id\": \"ASUGQLUAZ\", \"event\": {\"client_msg_id\": \"cc5d5937-b8f8-4eb0-ac41-1bdd0d1c1715\", \"type\": \"app_mention\", \"text\": \"<@USFPXD0N6> I think you're better now\", \"user\": \"U6LGZLC3Z\", \"ts\": \"1579412064.024400\", \"team\": \"T6JU0NLQH\", \"blocks\": [{\"type\": \"rich_text\", \"block_id\": \"LnvIT\", \"elements\": [{\"type\": \"rich_text_section\", \"elements\": [{\"type\": \"user\", \"user_id\": \"USFPXD0N6\"}, {\"type\": \"text\", \"text\": \"I think you're better now\"}]}]}], \"channel\": \"CSJBEGBLH\", \"event_ts\": \"1579412064.024400\"}, \"type\": \"event_callback\", \"event_id\": \"EvSU4BCCTE\", \"event_time\": 1579412064, \"authed_users\": [\"USFPXD0N6\"]}",
     "resource": "/{proxy+}",

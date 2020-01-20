@@ -1,0 +1,47 @@
+{
+    "token": "vfa0eQufJFrAZt3EOZsDrwmM",
+    "team_id": "T6JU0NLQH",
+    "api_app_id": "ASUGQLUAZ",
+    "event": {
+        "client_msg_id": "2edc4b9e-d5f0-48d8-b3e2-0955e2e2bfa4",
+        "type": "message",
+        "text": "ok I will mention <@U6JU28QCR> in the middle of a message",
+        "user": "U6LGZLC3Z",
+        "ts": "1579463472.001600",
+        "team": "T6JU0NLQH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qVih",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok I will mention "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U6JU28QCR"
+                            },
+                            {
+                                "type": "text",
+                                "text": " in the middle of a message"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "channel": "CSJBEGBLH",
+        "event_ts": "1579463472.001600",
+        "channel_type": "channel"
+    },
+    "type": "event_callback",
+    "event_id": "EvSJLLNXPB",
+    "event_time": 1579463472,
+    "authed_users": [
+        "U6LGZLC3Z"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "token": "vfa0eQufJFrAZt3EOZsDrwmM",
+    "team_id": "T6JU0NLQH",
+    "api_app_id": "ASUGQLUAZ",
+    "event": {
+        "client_msg_id": "f5bcaa7c-109b-4bca-b663-5552a15b1811",
+        "type": "message",
+        "text": "this is just a regular message tho",
+        "user": "U6LGZLC3Z",
+        "ts": "1579462694.001200",
+        "team": "T6JU0NLQH",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DhU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "this is just a regular message tho"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "channel": "CSJBEGBLH",
+        "event_ts": "1579462694.001200",
+        "channel_type": "channel"
+    },
+    "type": "event_callback",
+    "event_id": "EvSWN4RN07",
+    "event_time": 1579462694,
+    "authed_users": [
+        "U6LGZLC3Z"
+    ]
+}
