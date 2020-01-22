@@ -8,6 +8,7 @@ import logging
 from pointsHandler import isPointsMessage
 from pointsHandler import processPointsMessage
 from models.slackevent import SlackEvent
+from data.pointsRepository import PointsRepository
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 ZK_API_TOKEN = os.getenv("TOKEN")
@@ -44,8 +45,9 @@ def parseLambdaEvent(event):
 def handleMessage(slackEvent: SlackEvent):
     logger.info("message event")
     logger.info(slackEvent.raw["event"])
+    pointsRepository = PointsRepository("BloopsPoints") #todo read from environ
     if isPointsMessage(slackEvent):
-        return processPointsMessage(slackEvent)
+        return processPointsMessage(slackEvent, pointsRepository)
     return None
 
 def lambda_handler(event, context):
@@ -82,7 +84,7 @@ def lambda_handler(event, context):
         logger.info(response)
         client = slack.WebClient(token=ZK_API_TOKEN)
         response = client.chat_postMessage(
-            channel='#bottesting',
+            channel='#bot-talk',
             text=json.dumps(response)
         )
 

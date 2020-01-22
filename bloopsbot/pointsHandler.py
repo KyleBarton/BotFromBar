@@ -3,7 +3,7 @@ def isPointsMessage(slackEvent: SlackEvent):
     return "++" in slackEvent.fullMessage or "--" in slackEvent.fullMessage
 
 
-def processPointsMessage(slackEvent: SlackEvent):
+def processPointsMessage(slackEvent: SlackEvent, pointsRepository):
     msg = slackEvent.fullMessage
     plusSplit = [x.strip() for x in msg.split("++")]
     #let's not process if this isn't a simple plusplus for now
@@ -11,14 +11,16 @@ def processPointsMessage(slackEvent: SlackEvent):
         #todo hook up state
         subject = cleanseSubject(plusSplit[0])
         reason = cleanseReason(plusSplit[1])
-        return f'{subject} has 1 point, most recently for {reason}'
+        points = pointsRepository.processPlusMessage(subject, reason)
+        return f'{subject} has {points} point, most recently for {reason}'
 
     minusSplit = [x.strip() for x in msg.split("--")]
     if len(minusSplit) == 2:
         #todo hook up state
         subject = cleanseSubject(minusSplit[0])
         reason = cleanseReason(minusSplit[1])
-        return f'{subject} is down to 1 point, most recently for {reason}'
+        points = pointsRepository.processMinusMessage(subject, reason)
+        return f'{subject} is down to {points} point, most recently for {reason}'
 
 
 
