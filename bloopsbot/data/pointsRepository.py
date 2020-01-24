@@ -15,8 +15,9 @@ logger.setLevel(logging.INFO)
 # on the table resource are accessed or its load() method is called.
 
 class PointsRepository:
-    def __init__(self, tableName):
+    def __init__(self, tableName, teamId):
         self.tableName = tableName
+        self.teamId = teamId
         dynamodb = boto3.resource('dynamodb')
         self.table = dynamodb.Table(tableName)
 
@@ -32,11 +33,14 @@ class PointsRepository:
         )
         logger.info('query:')
         logger.info(queryResponse)
+        if not reason:
+            reason = 'NONE'
         if len(queryResponse['Items']) == 0:
             newPoints = pointIncr
             self.table.put_item(
                 Item={
                     'subject': subject,
+                    'teamId': self.teamId,
                     'points': newPoints,
                     'reasons': [
                         {
@@ -60,6 +64,7 @@ class PointsRepository:
             self.table.update_item(
                 Key={
                     'subject': subject,
+                    'teamId': self.teamId
                 },
                 UpdateExpression='SET points = :pts, reasons = list_append(reasons, :rsn)',
                 ExpressionAttributeValues={

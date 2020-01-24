@@ -7,27 +7,16 @@ import slack
 import logging
 from pointsHandler import isPointsMessage
 from pointsHandler import processPointsMessage
+from botMentionHandler import isBotMention
+from botMentionHandler import processBotMention
 from models.slackevent import SlackEvent
 from data.pointsRepository import PointsRepository
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 ZK_API_TOKEN = os.getenv("TOKEN")
 
-def handleMention_sass(slackEvent: SlackEvent):
-    return "you talking to me?"
-def handleMention_ape(slackEvent: SlackEvent):
-    #ape the message
-    #TODO don't use raw, just parse this in slackEvent
-    rich_text = [
-        rt for rt in slackEvent.raw["event"]["blocks"]
-        if rt["type"] == "rich_text"
-    ][0]
-    text = [
-        obj for obj in
-        rich_text["elements"][0]["elements"]
-        if obj["type"] == "text"
-    ][0]["text"]
-    return text
+# def handleMention_sass(slackEvent: SlackEvent):
+#     return "you talking to me?"
     
 def parseLambdaEvent(event):
     if "body" not in event:
@@ -42,15 +31,19 @@ def parseLambdaEvent(event):
         logger.error("Bad json sent in event.\nBody: {}\nError: {}", rawRequest, e)
         return None
 
-def handleMessage(slackEvent: SlackEvent):
-    logger.info("message event")
-    logger.info(slackEvent.raw["event"])
-    pointsRepository = PointsRepository("BloopsPoints") #todo read from environ
+def handleEvent(slackEvent: SlackEvent):
+    pointsRepository = PointsRepository("BloopsPoints", slackEvent.teamId) #todo read from environ
+    #It's important that bot not handle its own points, because it will count twice.
+    if isBotMention(slackEvent):
+        return processBotMention(slackEvent)
     if isPointsMessage(slackEvent):
         return processPointsMessage(slackEvent, pointsRepository)
+    logger.info('slack event not handled:')
+    logger.info(slackEvent.raw)
     return None
 
-def lambda_handler(event, context):
+
+def lambda_handler_safe(event, context):
     logger.info("request:")
     requestBody = parseLambdaEvent(event)
     if not requestBody:
@@ -66,22 +59,13 @@ def lambda_handler(event, context):
             "statusCode": 200,
             "body": requestBody["challenge"]
         }
-    response = None
+
     slackEvent = SlackEvent(requestBody)
-    if slackEvent.type == "message":
-        response = handleMessage(slackEvent)
-    if slackEvent.type == "app_mention":
-        response = handleMention_sass(slackEvent)
-    
-    # if "event" in requestBody and "type" in requestBody["event"]:
-    #     if (requestBody["event"]["type"] == "app_mention"):
-    #         response = handleMention_sass(requestBody)
-    #     if (requestBody["event"]["type"] == "message"):
-    #         logger.info("message event")
-    #         logger.info(requestBody["event"])
+    response = handleEvent(slackEvent)
     
     if response:
         logger.info(response)
+        logger.info('Would normally post in channel: ' + slackEvent.channelId)
         client = slack.WebClient(token=ZK_API_TOKEN)
         response = client.chat_postMessage(
             channel='#bot-talk',
@@ -97,3 +81,14 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "body": "Check logs for message"
     }
+
+def lambda_handler_emergency(event, context):
+    return {
+        "statusCode": 200,
+        "body": "Check logs for message"
+    }
+
+
+def lambda_handler(event, context):
+    # return lambda_handler_emergency(event, context)
+    return lambda_handler_safe(event, context)
