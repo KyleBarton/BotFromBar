@@ -9,8 +9,6 @@ def processPointsMessage(slackEvent: SlackEvent, pointsRepository):
     #let's not process if this isn't a simple plusplus for now
     if len(plusSplit) == 2:
         subject = cleanseSubject(plusSplit[0])
-        # reason = None
-        # if len(plusSplit) == 2:
         reason = cleanseReason(plusSplit[1])
         points = pointsRepository.processPlusMessage(subject, reason)
         pointNoun = 'point' if points == 1 else 'points'
@@ -22,8 +20,6 @@ def processPointsMessage(slackEvent: SlackEvent, pointsRepository):
     minusSplit = [x.strip() for x in msg.split("--")]
     if len(minusSplit) == 2:
         subject = cleanseSubject(minusSplit[0])
-        # reason = None
-        # if len(plusSplit) == 2:
         reason = cleanseReason(minusSplit[1])
         points = pointsRepository.processMinusMessage(subject, reason)
         pointNoun = 'point' if points == 1 else 'points'
@@ -37,11 +33,12 @@ def processPointsMessage(slackEvent: SlackEvent, pointsRepository):
 
 ## Private methods I guess
 def cleanseSubject(subject):
-    return subject
+    return (subject
         .strip("<>")
         .strip("@ ")
         .replace("++", "")
         .replace("--","").lower()
+    )
 
 def cleanseReason(reason):
     cleansedReason = reason

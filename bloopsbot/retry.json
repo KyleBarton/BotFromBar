@@ -1,0 +1,458 @@
+{
+    "resource": "/wfb",
+    "path": "/wfb/",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip,deflate",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-Country": "US",
+        "Content-Type": "application/json",
+        "Host": "s3m2uhr1g5.execute-api.us-west-2.amazonaws.com",
+        "User-Agent": "Slackbot 1.0 (+https://api.slack.com/robots)",
+        "Via": "1.1 7eefe38d76087dfad8e2f0b7702246ef.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "qdjfiM0Y28ocqJ5p8PUEhmHioIP0kItza5mAYmWdlqkeE95Pz2Zv_w==",
+        "X-Amzn-Trace-Id": "Root=1-5e311e93-21f6ba6c259deb9403c4cdde",
+        "X-Forwarded-For": "54.210.68.116, 130.176.98.142",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https",
+        "X-Slack-Request-Timestamp": "1580277395",
+        "X-Slack-Retry-Num": "3",
+        "X-Slack-Retry-Reason": "http_error",
+        "X-Slack-Signature": "v0=9266e0492b74d7e9a9931ab4b72eced9bd4929b6e6c07bd426787006995547e7"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip,deflate"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-Country": [
+            "US"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "s3m2uhr1g5.execute-api.us-west-2.amazonaws.com"
+        ],
+        "User-Agent": [
+            "Slackbot 1.0 (+https://api.slack.com/robots)"
+        ],
+        "Via": [
+            "1.1 7eefe38d76087dfad8e2f0b7702246ef.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "qdjfiM0Y28ocqJ5p8PUEhmHioIP0kItza5mAYmWdlqkeE95Pz2Zv_w=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-5e311e93-21f6ba6c259deb9403c4cdde"
+        ],
+        "X-Forwarded-For": [
+            "54.210.68.116, 130.176.98.142"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ],
+        "X-Slack-Request-Timestamp": [
+            "1580277395"
+        ],
+        "X-Slack-Retry-Num": [
+            "3"
+        ],
+        "X-Slack-Retry-Reason": [
+            "http_error"
+        ],
+        "X-Slack-Signature": [
+            "v0=9266e0492b74d7e9a9931ab4b72eced9bd4929b6e6c07bd426787006995547e7"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "yfqs25",
+        "resourcePath": "/wfb",
+        "httpMethod": "POST",
+        "extendedRequestId": "HDG2_EpvPHcF0cA=",
+        "requestTime": "29/Jan/2020:05:56:35 +0000",
+        "path": "/Prod/wfb/",
+        "accountId": "936779281452",
+        "protocol": "HTTP/1.1",
+        "stage": "Prod",
+        "domainPrefix": "s3m2uhr1g5",
+        "requestTimeEpoch": 1580277395090,
+        "requestId": "f1d72eab-bf7c-4799-817f-f06c7cb836e3",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "54.210.68.116",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "Slackbot 1.0 (+https://api.slack.com/robots)",
+            "user": null
+        },
+        "domainName": "s3m2uhr1g5.execute-api.us-west-2.amazonaws.com",
+        "apiId": "s3m2uhr1g5"
+    },
+    "body": {
+        "token": "ztT28tyn61QNv9sNUgQUMisb",
+        "team_id": "TLB9UQ0J0",
+        "api_app_id": "ASLSNPFTM",
+        "event": {
+            "type": "message",
+            "subtype": "message_changed",
+            "hidden": true,
+            "message": {
+                "type": "message",
+                "subtype": "thread_broadcast",
+                "text": "No... But kiku...",
+                "user": "ULDKLDBQX",
+                "thread_ts": "1580273706.000200",
+                "root": {
+                    "type": "message",
+                    "text": "",
+                    "files": [
+                        {
+                            "id": "FSVQS6ZJN",
+                            "created": 1580273703,
+                            "timestamp": 1580273703,
+                            "name": "uwsHg40_d.jpg",
+                            "title": "15380",
+                            "mimetype": "image\\/jpeg",
+                            "filetype": "jpg",
+                            "pretty_type": "JPEG",
+                            "user": "ULDKLDBQX",
+                            "editable": false,
+                            "size": 53907,
+                            "mode": "hosted",
+                            "is_external": false,
+                            "external_type": "",
+                            "is_public": true,
+                            "public_url_shared": false,
+                            "display_as_bot": false,
+                            "username": "",
+                            "url_private": "https:\\/\\/files.slack.com\\/files-pri\\/TLB9UQ0J0-FSVQS6ZJN\\/uwshg40_d.jpg",
+                            "url_private_download": "https:\\/\\/files.slack.com\\/files-pri\\/TLB9UQ0J0-FSVQS6ZJN\\/download\\/uwshg40_d.jpg",
+                            "thumb_64": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_64.jpg",
+                            "thumb_80": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_80.jpg",
+                            "thumb_360": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_360.jpg",
+                            "thumb_360_w": 351,
+                            "thumb_360_h": 360,
+                            "thumb_480": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_480.jpg",
+                            "thumb_480_w": 468,
+                            "thumb_480_h": 480,
+                            "thumb_160": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_160.jpg",
+                            "image_exif_rotation": 1,
+                            "original_w": 640,
+                            "original_h": 656,
+                            "thumb_tiny": "AwAwAC6GFDITjtUphI71HbH71TFsj735VJaWhEYsDr+lIV4HP6VLwRyTTWAIwvB9apJA0IluzDcv61XmUo+DyascjABOe9QzyYlwVzgD+VGm6Ja7k1rEd4DggE\\/0NXDbxeh\\/OowczL1wCOD9DT2yHxnr3pJuwDJoUQKUHJ9eajKgDPA9MCrMg+Ue1R7QQQeBVXBFeM4f5sY9qJIIywZy4yB9Kk8kBGz1PT2psc3y7XGcd6jUvQS0KGX5GLcjr+NWJT+8SsyPzI3ymam33B52n8jVbGbNFuUqJjsHzZqp9omVdx6Zx1prXbHGRn86LMLlmR2ZCEVvrUB2ljhsHvRG0r52hAPc4qN4mVjudcnng0rFJn\\/\\/2Q==",
+                            "permalink": "https:\\/\\/teamwfbworkspace.slack.com\\/files\\/ULDKLDBQX\\/FSVQS6ZJN\\/uwshg40_d.jpg",
+                            "permalink_public": "https:\\/\\/slack-files.com\\/TLB9UQ0J0-FSVQS6ZJN-a9a1410608",
+                            "has_rich_preview": false
+                        }
+                    ],
+                    "upload": true,
+                    "user": "ULDKLDBQX",
+                    "display_as_bot": false,
+                    "ts": "1580273706.000200",
+                    "client_msg_id": "b0958fb2-58b9-4107-9e66-ef66777d8c91",
+                    "thread_ts": "1580273706.000200",
+                    "reply_count": 17,
+                    "reply_users_count": 4,
+                    "latest_reply": "1580277034.005500",
+                    "reply_users": [
+                        "UL0CL7FFD",
+                        "ULDKLDBQX",
+                        "ULE0XDJ30",
+                        "USLACKBOT"
+                    ],
+                    "replies": [
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580274171.001900"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580274182.002200"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580274207.002500"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580274820.002700"
+                        },
+                        {
+                            "user": "USLACKBOT",
+                            "ts": "1580274821.002900"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580274871.003200"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580274890.003400"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580274896.003600"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580274912.003800"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580275136.004000"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580275267.004200"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580275287.004400"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580276562.004600"
+                        },
+                        {
+                            "user": "USLACKBOT",
+                            "ts": "1580276564.004800"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580276984.005100"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580277033.005300"
+                        },
+                        {
+                            "user": "USLACKBOT",
+                            "ts": "1580277034.005500"
+                        }
+                    ]
+                },
+                "blocks": [
+                    {
+                        "type": "rich_text",
+                        "block_id": "eAVK",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "No... But kiku..."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "client_msg_id": "819b0285-07f8-49db-954c-e503ce651a09",
+                "ts": "1580277033.005300"
+            },
+            "channel": "CL0BG210S",
+            "previous_message": {
+                "type": "message",
+                "subtype": "thread_broadcast",
+                "text": "No... But kiku...",
+                "user": "ULDKLDBQX",
+                "ts": "1580277033.005300",
+                "thread_ts": "1580273706.000200",
+                "root": {
+                    "type": "message",
+                    "text": "",
+                    "files": [
+                        {
+                            "id": "FSVQS6ZJN",
+                            "created": 1580273703,
+                            "timestamp": 1580273703,
+                            "name": "uwsHg40_d.jpg",
+                            "title": "15380",
+                            "mimetype": "image\\/jpeg",
+                            "filetype": "jpg",
+                            "pretty_type": "JPEG",
+                            "user": "ULDKLDBQX",
+                            "editable": false,
+                            "size": 53907,
+                            "mode": "hosted",
+                            "is_external": false,
+                            "external_type": "",
+                            "is_public": true,
+                            "public_url_shared": false,
+                            "display_as_bot": false,
+                            "username": "",
+                            "url_private": "https:\\/\\/files.slack.com\\/files-pri\\/TLB9UQ0J0-FSVQS6ZJN\\/uwshg40_d.jpg",
+                            "url_private_download": "https:\\/\\/files.slack.com\\/files-pri\\/TLB9UQ0J0-FSVQS6ZJN\\/download\\/uwshg40_d.jpg",
+                            "thumb_64": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_64.jpg",
+                            "thumb_80": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_80.jpg",
+                            "thumb_360": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_360.jpg",
+                            "thumb_360_w": 351,
+                            "thumb_360_h": 360,
+                            "thumb_480": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_480.jpg",
+                            "thumb_480_w": 468,
+                            "thumb_480_h": 480,
+                            "thumb_160": "https:\\/\\/files.slack.com\\/files-tmb\\/TLB9UQ0J0-FSVQS6ZJN-69e32b09d7\\/uwshg40_d_160.jpg",
+                            "image_exif_rotation": 1,
+                            "original_w": 640,
+                            "original_h": 656,
+                            "thumb_tiny": "AwAwAC6GFDITjtUphI71HbH71TFsj735VJaWhEYsDr+lIV4HP6VLwRyTTWAIwvB9apJA0IluzDcv61XmUo+DyascjABOe9QzyYlwVzgD+VGm6Ja7k1rEd4DggE\\/0NXDbxeh\\/OowczL1wCOD9DT2yHxnr3pJuwDJoUQKUHJ9eajKgDPA9MCrMg+Ue1R7QQQeBVXBFeM4f5sY9qJIIywZy4yB9Kk8kBGz1PT2psc3y7XGcd6jUvQS0KGX5GLcjr+NWJT+8SsyPzI3ymam33B52n8jVbGbNFuUqJjsHzZqp9omVdx6Zx1prXbHGRn86LMLlmR2ZCEVvrUB2ljhsHvRG0r52hAPc4qN4mVjudcnng0rFJn\\/\\/2Q==",
+                            "permalink": "https:\\/\\/teamwfbworkspace.slack.com\\/files\\/ULDKLDBQX\\/FSVQS6ZJN\\/uwshg40_d.jpg",
+                            "permalink_public": "https:\\/\\/slack-files.com\\/TLB9UQ0J0-FSVQS6ZJN-a9a1410608",
+                            "has_rich_preview": false
+                        }
+                    ],
+                    "upload": true,
+                    "user": "ULDKLDBQX",
+                    "display_as_bot": false,
+                    "ts": "1580273706.000200",
+                    "client_msg_id": "b0958fb2-58b9-4107-9e66-ef66777d8c91",
+                    "thread_ts": "1580273706.000200",
+                    "reply_count": 17,
+                    "reply_users_count": 4,
+                    "latest_reply": "1580277034.005500",
+                    "reply_users": [
+                        "UL0CL7FFD",
+                        "ULDKLDBQX",
+                        "ULE0XDJ30",
+                        "USLACKBOT"
+                    ],
+                    "replies": [
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580274171.001900"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580274182.002200"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580274207.002500"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580274820.002700"
+                        },
+                        {
+                            "user": "USLACKBOT",
+                            "ts": "1580274821.002900"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580274871.003200"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580274890.003400"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580274896.003600"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580274912.003800"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580275136.004000"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580275267.004200"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580275287.004400"
+                        },
+                        {
+                            "user": "ULE0XDJ30",
+                            "ts": "1580276562.004600"
+                        },
+                        {
+                            "user": "USLACKBOT",
+                            "ts": "1580276564.004800"
+                        },
+                        {
+                            "user": "UL0CL7FFD",
+                            "ts": "1580276984.005100"
+                        },
+                        {
+                            "user": "ULDKLDBQX",
+                            "ts": "1580277033.005300"
+                        },
+                        {
+                            "user": "USLACKBOT",
+                            "ts": "1580277034.005500"
+                        }
+                    ]
+                },
+                "blocks": [
+                    {
+                        "type": "rich_text",
+                        "block_id": "eAVK",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "No... But kiku..."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "client_msg_id": "819b0285-07f8-49db-954c-e503ce651a09"
+            },
+            "event_ts": "1580277035.005700",
+            "ts": "1580277035.005700",
+            "channel_type": "channel"
+        },
+        "type": "event_callback",
+        "event_id": "EvT8KN66PJ",
+        "event_time": 1580277035,
+        "authed_users": [
+            "ULE0XDJ30"
+        ]
+    },
+    "isBase64Encoded": false
+}
