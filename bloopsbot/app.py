@@ -61,7 +61,6 @@ def handleEvent(slackEvent: SlackEvent, userAdapter: UserAdapter):
     return None
 
 def lambda_handler_safe(event, context):
-    logger.info("request:")
     slackApiToken = os.getenv("TOKEN")
     slackClient = getSlackClient(slackApiToken)
     userAdapter = UserAdapter(slackClient)
@@ -86,33 +85,26 @@ def lambda_handler_safe(event, context):
     
     if response:
         logger.info(response)
-        #logger.info('Would normally post in channel: ' + slackEvent.channelId)
         client = slackClient
-        response = client.chat_postMessage(
+        slackClientResponse = client.chat_postMessage(
             channel=slackEvent.channelId,
             text=json.dumps(response)
         )
 
         return {
             "statusCode": 200,
-            "body": "App mention handled"
+            "body": {
+                "MessageHandled": True,
+                "ResponseMessage": json.dumps(response)
+            }
         }
 
     return {
         "statusCode": 200,
-        "body": "Check logs for message"
+        "body": {
+            "MessageHandled": False,
+        }
     }
-
-def lambda_handler_emergency(event, context):
-    return {
-        "statusCode": 200,
-        "body": "Check logs for message"
-    }
-
-# 'event': {'bot_id': 'BSYB58Q8G' <- BloopsBot
-# 
-
 
 def lambda_handler(event, context):
-    # return lambda_handler_emergency(event, context)
     return lambda_handler_safe(event, context)
