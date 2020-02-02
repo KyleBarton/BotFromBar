@@ -14,9 +14,9 @@ from botMentionHandler import processBotMention
 from models.slackevent import SlackEvent
 from data.pointsRepository import PointsRepository
 from adapters.userAdapter import UserAdapter
+from adapters.slackClientFactory import getSlackClient
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-ZK_API_TOKEN = os.getenv("TOKEN")
 
 def parseLambdaEvent(event):
     logger.info("Event: ")
@@ -62,7 +62,8 @@ def handleEvent(slackEvent: SlackEvent, userAdapter: UserAdapter):
 
 def lambda_handler_safe(event, context):
     logger.info("request:")
-    slackClient = slack.WebClient(token=ZK_API_TOKEN)
+    slackApiToken = os.getenv("TOKEN")
+    slackClient = getSlackClient(slackApiToken)
     userAdapter = UserAdapter(slackClient)
     requestBody = parseLambdaEvent(event)
     if not requestBody:
